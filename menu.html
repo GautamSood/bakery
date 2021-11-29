@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bakery | Menu</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css?family=Niconne|Teko:300,400&display=swap");
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    header {
+        background: linear-gradient(rgba(16, 29, 44, 0.95), rgba(16, 29, 44, 0.95));
+        padding: 1rem;
+
+    }
+
+
+    .topnav {
+
+        overflow: hidden;
+    }
+
+    /* Style the links inside the navigation bar */
+    .topnav a {
+        float: right;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+
+    }
+
+    .topnav a:hover {
+        border: 1.5px solid sandybrown;
+        border-style: hidden hidden solid hidden;
+    }
+
+    .filterDiv {
+        float: left;
+        display: none;
+        margin: 31px;
+        text-align: center;
+
+    }
+
+    .show {
+        display: block;
+    }
+
+    .container1 {
+        margin-top: 20px;
+        margin-left: 38px;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    /* Style the buttons */
+
+
+
+    .btn1 {
+        height: 2.5rem;
+        border: 1px solid transparent;
+        border-radius: 3px;
+        outline: none;
+        padding: 8px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+    }
+
+    .btn1:hover {
+        background-color: rgb(182, 182, 182);
+    }
+
+    .btn1.active {
+        background-color: #666;
+        color: white;
+    }
+
+    .orderbtn {
+        color: #fff !important;
+        background-color: #c69963;
+
+    }
+
+    .orderbtn:hover {
+        color: rgb(255, 255, 255) !important;
+        background-color: #df8429;
+
+
+    }
+
+    .orderbtn:hover i {
+        transition-duration: 200s;
+        transform: rotate(100000deg);
+        color: #000;
+    }
+
+    .card img {
+        height: 16rem;
+
+    }
+
+    footer {
+        background-color: #101d2c;
+        color: rgba(255, 255, 255, .5);
+
+    }
+</style>
+
+<body>
+    <header>
+
+        <div class="topnav">
+            <img src="menu-img/logo.png" height="100rem" width="100rem" style="margin-left: 5%;">
+            <a href="index.html#chef">Our Team</a>
+            <a href="index.html#contacts">Contact</a>
+            <a href="index.html#about">About</a>
+            <a class="active" href="index.html">Home</a>
+        </div>
+        <div class="hero-text w-100 px-2 px-sm-0 " style="color: #c69963; text-align: center;">
+            <h1 class="display-4" style="font-family: Niconne;">Menu</h1>
+        </div>
+
+        <div id="myBtnContainer">
+            <button class="btn1 active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn1" onclick="filterSelection('choco')"> Premium Chocolate cakes</button>
+            <button class="btn1" onclick="filterSelection('coffee')"> coffee Cakes</button>
+            <button class="btn1" onclick="filterSelection('fruit')"> Fruit Cakes</button>
+            <button class="btn1" onclick="filterSelection('Cupcake')"> Cup Cakes</button>
+        </div>
+    </header>
+    <div class="container1">
+        <div class="filterDiv coffee card" style="width: 18rem;">
+            <img class="card-img-top" src="menu-img/coffee.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title" style="font-family: teko;">Square Shape Chocolate Coffee Cake
+                </h5>
+                <p class="card-text">Rs 775</p>
+                <a href="orderpage.html" class="btn btn-outline-warning orderbtn"><i class="far fa-star"></i> Order
+                    Now</a>
+            </div>
+        </div>
+        <div class="filterDiv coffee card" style="width: 18rem;">
+            <img class="card-img-top" src="menu-img/coffee1.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title" style="font-family: teko;">Tiramisu Kitkat Cheese Cake</h5>
+                <p class="card-text">Rs 699</p>
+                <a href="orderpage.html" class="btn btn-outline-warning orderbtn"><i class="far fa-star"></i> Order Now
+                </a>
+            </div>
+        </div>
+        <div class="filterDiv choco card" style="width: 18rem;">
+            <img class="card-img-top" src="menu-img/chocolate.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title" style="font-family: teko;">Chocolaty Creamy Round Cake</h5>
+                <p class="card-text"> Rs 775</p>
+                <a href="orderpage.html" class="btn btn-outline-warning orderbtn"><i class="far fa-star"></i> Order Now
+                </a>
+            </div>
+        </div>
+        <div class="filterDiv choco card" style="width: 18rem;">
+            <img class="card-img-top" src="menu-img/Chocolate2.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title" style="font-family: teko;">Chocolaty Surprise Truffle Cake</h5>
+                <p class="card-text">RS 599</p>
+                <a href="orderpage.html" class="btn btn-outline-warning orderbtn"><i class="far fa-star"></i> Order Now
+                </a>
+            </div>
+        </div>
+        <div class="filterDiv choco card" style="width: 18rem;">
+            <img class="card-img-top" src="menu-img/chocolate4.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title" style="font-family: teko;">Snicker Fuse Chocolate Cake</h5>
+                <p class="card-text">Rs 699</p>
+                <a href="orderpage.html" class="btn btn-outline-warning orderbtn"><i class="far fa-star"></i> Order Now
+                </a>
+            </div>
+        </div>
+        <div class="filterDiv fruit card" style="width: 18rem;">
+            <img class="card-img-top" src="menu-img/fruitcake.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title" style="font-family: teko;">Fruit Pastries</h5>
+                <p class="card-text"> Rs 90</p>
+                <a href="orderpage.html" class="btn btn-outline-warning orderbtn"><i class="far fa-star"></i> Order Now
+                </a>
+            </div>
+        </div>
+        <div class="filterDiv fruit card" style="width: 18rem;">
+            <img class="card-img-top" src="menu-img/fruitcake2.jpg" alt="Card image cap">
+            <div class="card-body">
+
+                <h5 class="card-title" style="font-family: teko;">Heart Shape Fruit Nut Cake</h5>
+                <p class="card-text"> Rs 1200</p>
+                <a href="orderpage.html" class="btn btn-outline-warning orderbtn"><i class="far fa-star"></i> Order Now
+                </a>
+            </div>
+        </div>
+        <div class="filterDiv fruit card" style="width: 18rem;">
+            <img class="card-img-top" src="menu-img/fruitcake3.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title" style="font-family: teko;">Cream Cake With Caramel N Pineapple</h5>
+                <p class="card-text"> Rs 599</p>
+                <a href="orderpage.html" class="btn btn-outline-warning orderbtn"><i class="far fa-star"></i> Order Now
+                </a>
+            </div>
+        </div>
+        <div class="filterDiv fruit card" style="width: 18rem;">
+            <img class="card-img-top" src="menu-img/fruitcake4.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title" style="font-family: teko;">Fruit Jar Cake</h5>
+                <p class="card-text"> Rs 199</p>
+                <a href="orderpage.html" class="btn btn-outline-warning orderbtn"><i class="far fa-star"></i> Order Now
+                </a>
+            </div>
+        </div>
+        <div class="filterDiv Cupcake fruit card" style="width: 18rem;">
+            <img class="card-img-top" src="menu-img/cupcake1.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title" style="font-family: teko;">Mango Cupcake</h5>
+                <p class="card-text"> Rs 65</p>
+                <a href="orderpage.html" class="btn btn-outline-warning orderbtn"><i class="far fa-star"></i> Order Now
+                </a>
+            </div>
+        </div>
+        <div class="filterDiv Cupcake card" style="width: 18rem;">
+            <img class="card-img-top" src="menu-img/cupcake2.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title" style="font-family: teko;">Set Of 6 Chocolate Choco Chips & Oreo Cup Cakes</h5>
+                <p class="card-text"> Rs 499</p>
+                <a href="orderpage.html" class="btn btn-outline-warning orderbtn"><i class="far fa-star"></i> Order Now
+                </a>
+            </div>
+        </div>
+        <div class="filterDiv Cupcake coffee card" style="width: 18rem;">
+            <img class="card-img-top" src="menu-img/cupcake3.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title" style="font-family: teko;">Two Coffee Cupcakes</h5>
+                <p class="card-text"> Rs 199</p>
+                <a href="orderpage.html" class="btn btn-outline-warning orderbtn"><i class="far fa-star"></i> Order Now
+                </a>
+            </div>
+        </div>
+        <div class="filterDiv choco Cupcake card" style="width: 18rem;">
+            <img class="card-img-top" src="menu-img/cupcake4.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title" style="font-family: teko;">Chocolate Cupcake Swirl Frosting</h5>
+                <p class="card-text"> Rs 199</p>
+                <a href="orderpage.html" class="btn btn-outline-warning orderbtn"><i class="far fa-star"></i> Order Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-5">
+        &copy; Bakery 2019
+    </footer>
+
+
+
+
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+
+</body>
+
+</html>

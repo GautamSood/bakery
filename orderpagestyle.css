@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css?family=Niconne|Teko:300,400&display=swap");
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background: linear-gradient(rgba(16, 29, 44, 0.95), rgba(16, 29, 44, 0.95));
+    padding: 1rem;
+
+}
+
+
+.topnav {
+
+    overflow: hidden;
+}
+
+
+.topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+
+}
+.topnav a:hover {
+    border: 1.5px solid sandybrown;
+    border-style: hidden hidden solid hidden;
+}
+.order-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.order-container img{
+    height: 32rem;
+    width: 32rem;
+}
+.order-form{
+    margin-top: 2rem;
+    padding-left: 7rem;
+    margin-right: 12rem;
+}
+.form-name{
+    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+    font-family: teko;
+    font-size: 25px;
+}
+.form-type{
+    width: 38rem;
+    
+}
+.order-btn{
+    margin-top: 2rem;
+    width: 12rem;
+}
