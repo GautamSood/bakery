@@ -28,7 +28,7 @@
         overflow: hidden;
     }
 
-    /* Style the links inside the navigation bar */
+
     .topnav a {
         float: right;
         color: #f2f2f2;
@@ -65,7 +65,7 @@
 
     }
 
-    /* Style the buttons */
+
 
 
 
@@ -87,6 +87,8 @@
         background-color: #666;
         color: white;
     }
+
+
 
     .orderbtn {
         color: #fff !important;
@@ -134,9 +136,9 @@
         </div>
 
         <div id="myBtnContainer">
-            <button class="btn1 active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn1 " onclick="filterSelection('all')"> Show all</button>
             <button class="btn1" onclick="filterSelection('choco')"> Premium Chocolate cakes</button>
-            <button class="btn1" onclick="filterSelection('coffee')"> coffee Cakes</button>
+            <button class="btn1" onclick="filterSelection('coffee')"> Coffee Cakes</button>
             <button class="btn1" onclick="filterSelection('fruit')"> Fruit Cakes</button>
             <button class="btn1" onclick="filterSelection('Cupcake')"> Cup Cakes</button>
         </div>
@@ -264,7 +266,7 @@
     </div>
 
     <footer class="text-center py-5">
-        &copy; Bakery 2019
+        &copy; Bakery 2021
     </footer>
 
 
@@ -305,12 +307,16 @@
 
         // Add active class to the current button (highlight it)
         var btnContainer = document.getElementById("myBtnContainer");
-        var btns = btnContainer.getElementsByClassName("btn");
+        var btns = btnContainer.getElementsByClassName("btn1");
         for (var i = 0; i < btns.length; i++) {
             btns[i].addEventListener("click", function () {
                 var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
+
+                current[0].classList.remove("active");
+
+                console.log(current[0]);
                 this.className += " active";
+
             });
         }
     </script>
